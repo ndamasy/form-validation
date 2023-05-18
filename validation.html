@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./validation.css">
+    <title>form validation</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>sign up here</h1>
+        <!--form-->
+        <form id="form">
+            <!--full name-->
+            <div id="form-groupe" >
+                <label for="name"> Full Name</label>
+                <input id="name" placeholder="Full Name" type="text" required minlength="3" maxlength="100" name="name">
+            </div>
+                <!--telephone number-->
+            <div id="form-groupe">
+                <label for="phone"> phone number</label>
+                <input id="phone" placeholder="555-555-555" type="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" name="phone">
+            </div>
+                    <!--e mail adress-->
+            <div id="form-groupe">
+                <label for="Email"> Email Address</label>
+                <input id="Email" placeholder="Email@address.com" type="email" required name="email">
+            </div>
+                    <!--website url-->
+            <div id="form-groupe">
+                <label for="website"> website url</label>
+                <input id="website" placeholder="Full Website url" type="url" required name="website">
+            </div>
+                    <!--create password-->
+            <div id="form-groupe">
+                <label for="password1"> password</label>
+                <input id="password1" placeholder=" create password" type="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" 
+                title="please include at least 1 uppercase character , 1 lowercase character , 1 number .">
+            </div>
+                            <!--confirm password-->
+            <div id="form-groupe">
+                <label for="password2"> password</label>
+                <input id="password2" placeholder="confirm password" type="password" required name="password">
+            </div>
+            <button type="submit">register</button>
+
+        </form>
+        <!--error message-->
+        <div class="message-container">
+            <h3 id="message">Don't hesitate</h3>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="validation.js"></script>
+</body>
+</html>
